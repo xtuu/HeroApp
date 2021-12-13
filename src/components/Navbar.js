@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { AuthContext } from '../auth/authContext'
+import { types } from '../types/types'
+
 
 const navigation = [
     { name: 'HeroApp', href: '/home', current: true },
@@ -17,11 +19,19 @@ function classNames(...classes) {
 
 export const Navbar = () => {
 
-    const context = useContext(AuthContext);
+    const { user, dispatch } = useContext(AuthContext);
 
     const navigate = useNavigate();
 
     const handleLogout = () => {
+
+        const action = {
+            type: types.logout,
+        }
+
+        dispatch(action);
+
+
         navigate('/login', {
             replace: true
         })
@@ -71,7 +81,7 @@ export const Navbar = () => {
                                 <div
                                     className="p-1 rounded-full text-blue-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                                 >
-                                    {context.user.name}
+                                    {user.name}
                                 </div>
 
                                 <button
