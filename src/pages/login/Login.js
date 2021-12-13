@@ -1,5 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { AuthContext } from '../../auth/authContext'
+import { types } from '../../types/types'
 
 
 
@@ -7,12 +9,23 @@ import { useNavigate } from 'react-router-dom'
 export const Login = () => {
 
     const navigate = useNavigate()
-
+    const { dispatch } = useContext(AuthContext)
 
     const handleLogin = () => {
+
+        const action = {
+            type: types.login,
+            payload: { name: ' Adrian' },
+        }
+        dispatch(action);
+
         navigate('/home', {
             replace: true,
         });
+
+
+
+
     }
 
 

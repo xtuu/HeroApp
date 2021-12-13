@@ -20,7 +20,6 @@ export const DashboardRoutes = () => {
                     <Route path="/search" element={<Search />} />
                 </Routes>
             </div>
-
         </Fragment>
     )
 }
