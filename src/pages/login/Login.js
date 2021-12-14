@@ -20,7 +20,7 @@ export const Login = () => {
 
         dispatch(action);
 
-        const lastPath = localStorage.setItem('lastPath') || '/home';
+        const lastPath = localStorage.setItem('lastPath') || '/';
 
         navigate(lastPath, {
             replace: true,
@@ -39,7 +39,7 @@ export const Login = () => {
                 <button
                     onClick={handleLogin}
                     className="inline-flex items-center px-2.5 py-1.5 border border-transparent text-xs 
-                    font-medium rounded shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                    font-medium rounded shadow-sm text-white hover:text-white bg-black hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                     Login
                 </button>

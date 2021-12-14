@@ -7,7 +7,7 @@ import { types } from '../types/types'
 
 
 const navigation = [
-    { name: 'HeroApp', href: '/home', current: true },
+    { name: 'HeroApp', href: '/', current: true },
     { name: 'Marvel', href: '/marvel', current: false },
     { name: 'Dc', href: '/dc', current: false },
     { name: 'Search', href: '/search', current: false },

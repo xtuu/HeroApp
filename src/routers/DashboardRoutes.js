@@ -13,7 +13,7 @@ export const DashboardRoutes = () => {
             <Navbar />
             <div className='p-4'>
                 <Routes>
-                    <Route path="/home" element={<Home />} />
+                    <Route path="/" element={<Home />} />
                     <Route path="/marvel" element={<Marvel />} />
                     <Route path="/dc" element={<Dc />} />
                     <Route path="/hero/:id" element={<Hero />} />
